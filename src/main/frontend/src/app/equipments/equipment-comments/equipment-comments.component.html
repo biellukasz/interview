@@ -1,0 +1,21 @@
+<h3>Comments of selected Equipment</h3>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let comment of equipmentService.selectedCommentsList">
+    <td>Comment</td>
+    <td>{{comment.comment}}</td>
+    <td>
+      <!--<button class="btn btn-primary btn-xs" type="button" (click)="showForEdit(equipment)">Edit</button>-->
+      <!--<button class="btn btn-primary btn-xs" type="button" (click)="showComments(equipment.uuid)">Comments</button>-->
+      <!--<button class="btn btn-primary btn-xs" type="button" (click)="showProp(equipment.uuid)">Properties</button>-->
+      <button class="btn btn-danger btn-xs" (click)="deleteComment(comment.uuid)">Delete</button>
+    </td>
+  </tr>
+</table>
+<form role="form">
+  <!--<input hidden value="" [(ngModel)]="equipmentService.selectedPropertis[0].equipmentUUID" >-->
+  <div class="form-group">
+    <label > Comment:</label>
+    <input class="form-control" type="text"   name="comment" [(ngModel)]="commentToSubmit.comment">
+  </div>
+  <button class="btn btn-primary" type="button" (click)="addComment()">Add Comment</button>
+</form>

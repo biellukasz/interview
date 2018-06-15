@@ -1,0 +1,13 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let equipment of equipmentService.equipmentList">
+    <td>{{equipment.type}}</td>
+    <td>{{equipment.toFix}}</td>
+    <td>
+      <button class="btn btn-primary btn-xs" type="button" (click)="showForEdit(equipment)">Edit</button>
+      <button class="btn btn-primary btn-xs" type="button" (click)="showComments(equipment)">Comments</button>
+      <button class="btn btn-primary btn-xs" type="button" (click)="showProp(equipment)">Properties</button>
+      <button class="btn btn-danger btn-xs" type="button" (click)="onDelete(equipment.uuid)">Delete</button>
+    </td>
+  </tr>
+</table>
+

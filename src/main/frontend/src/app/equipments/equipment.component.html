@@ -1,0 +1,24 @@
+<div>
+<h1 style="text-align:center">Equipment StoreHouse</h1>
+</div>
+<div [hidden]="!authenticated()">
+<div class="row">
+  <div class="col-md-6">
+    <app-equipment-manager></app-equipment-manager>
+  </div>
+  <div class="col-md-6">
+    <app-equipment-list></app-equipment-list>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <app-equipment-comments></app-equipment-comments>
+  </div>
+  <div class="col-md-6">
+    <app-equipments-propertis></app-equipments-propertis>
+  </div>
+</div>
+</div>
+<div [hidden]="authenticated()">
+  <p>Login to see your StoreHouse</p>
+</div>
